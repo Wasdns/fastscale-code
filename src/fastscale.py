@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import math
-import argparse
 import networkx as nx
 
 """Input: root_rate - input rate of the whole SFC;
@@ -46,7 +45,6 @@ def fastscale(root_rate, edges, capacities):
         new_out_rate = in_rate
         old_out_rate = 0
         successors = list(DG.successors(current))
-        print successors
         if len(successors) != 0:
             # calculate old_out_rate
             for successor in successors:
