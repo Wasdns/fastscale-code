@@ -34,6 +34,7 @@ def main():
             print '%d NFs: %0.6f ms' % (args.num, (time2-time1)*1000.0)
             res.append((time2-time1)*1000.0)
         print 'Result: \n', res
+        print 'Average:', sum(res)*1.0 / len(res)*1.0
     else:
         res = []
         for i in range(args.loop):
@@ -53,6 +54,7 @@ def main():
             print '%d branches: %0.6f ms' % (args.num, (time2-time1)*1000.0)
             res.append((time2-time1)*1000.0)
         print 'Result: \n', res
+        print 'Average:', sum(res)*1.0 / len(res)*1.0
 
 if __name__ == '__main__':
     main()
