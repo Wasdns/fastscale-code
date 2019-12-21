@@ -30,6 +30,7 @@ void dag()
 	ll no = 1;
 	for(ll i = 1; i <= n; i++)
 	{
+		g[i].clear(); 
 		ll layer = ((i-1)/m)+1;
 		for(ll j = 1; j <= m; j++)
 		{
@@ -98,7 +99,6 @@ int main(int argc, char *argv[])
 		printf("The value of N is up to 500 and the value entered is %lld\n",n);
 		return 0;
 	}
-	dag();
 	//	for(ll i = 1; i <= n; i++)
 	//	{
 	//		for(ll j = 0; j < g[i].size(); j++)
@@ -112,6 +112,7 @@ int main(int argc, char *argv[])
 	start = clock();
 	for(ll l = 0; l < loop; l++)
 	{
+		dag();
 		while(1)
 		{
 			memset(vis, 0, sizeof(pre));
@@ -141,6 +142,6 @@ int main(int argc, char *argv[])
 		}
 	}
 	end = clock();
-	printf("The time taken to execute the program is %lf ms", (double)(end - start) / CLOCKS_PER_SEC / loop);
+	printf("The time taken to execute the program is %lf ms", (double)(end - start) / loop);
 	return 0;
 }
