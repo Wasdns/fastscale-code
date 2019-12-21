@@ -142,6 +142,6 @@ int main(int argc, char *argv[])
 		}
 	}
 	end = clock();
-	printf("The time taken to execute the program is %lf ms", (double)(end - start) / loop);
+	printf("After run %lld, the average of time to execute the program is %lf s\n", loop, (double)(end - start)/CLOCKS_PER_SEC/loop);
 	return 0;
 }
