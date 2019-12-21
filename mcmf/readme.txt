@@ -1,0 +1,5 @@
+benchmark.exe -l 1000 -M 5 -m 100
+
+-l: loop
+-M: how many layers are there
+-m: how many nodes per layer
