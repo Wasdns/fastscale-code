@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define MAXN 501
+#define MAXN 100000
 #define INF 99999
 using namespace std;
 typedef long long ll;
@@ -91,11 +91,11 @@ int main(int argc, char *argv[])
 		}
 	}
 	n = M*m;
-	if(n >= 501)
-	{
-		printf("The value of N is up to 500 and the value entered is %lld\n",n);
-		return 0;
-	}
+	//if(n >= 501)
+	//{
+	//	printf("The value of N is up to 500 and the value entered is %lld\n",n);
+	//	return 0;
+	//}
 	//	for(ll i = 1; i <= n; i++)
 	//	{
 	//		for(ll j = 0; j < g[i].size(); j++)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import math
+import time
 import networkx as nx
 
 """Input: root_rate - input rate of the whole SFC;
