@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define MAXN 100000
+#define MAXN 1000001
 #define ROOT 1
 #define INF 99999
 using namespace std;
@@ -118,6 +118,12 @@ void print_plan()
 	}
 }
 
+void print_error()
+{
+	printf("The value of mode can only be 0 or 1, 0 means nodes and 1 means branchs.\n");
+	printf("The value of n cannot exceed %d.\n", MAXN);
+}
+
 int main(int argc, char *argv[])
 {
     ll loop = 3, mode = 0;
@@ -136,7 +142,11 @@ int main(int argc, char *argv[])
 			loop = atoi(argv[i + 1]);
 		}
 	}
-	
+	if((mode != 0 && mode != 1) || (n >= MAXN-1))
+	{
+		print_error();
+		return 0;
+	}
 	clock_t start, end, sum = 0;
 	for(ll l = 0; l < loop; l++)
     {
