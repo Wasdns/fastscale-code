@@ -168,7 +168,6 @@ int main(int argc, char *argv[])
 					break;
 				}
 				add(i,i+1,w);
-				
 			}
 		}
 		else if(mode == 1)
