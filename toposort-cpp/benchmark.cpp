@@ -160,6 +160,7 @@ int main(int argc, char *argv[])
 		{
 			root_rate = 100;
 			w = 5;
+			start = clock();
 			for(ll i = 1;i <= n;i++)
 			{
 				capacities[i] = w;
@@ -169,11 +170,14 @@ int main(int argc, char *argv[])
 				}
 				add(i,i+1,w);
 			}
+			end = clock();
+			sum += end - start;
 		}
 		else if(mode == 1)
 		{
 			root_rate = 1000;
 			w = 100/n;
+			start = clock();
 			for(ll i = 1;i <= n;i++)
 			{
 				if(i == 1)
@@ -190,6 +194,8 @@ int main(int argc, char *argv[])
 				}
 				add(1, i+1, w);
 			}
+			end = clock();
+			sum += end - start;
 		}
         //print_edge();
 		start = clock();
