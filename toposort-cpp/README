@@ -1,0 +1,8 @@
+# Usage
+```
+./benchmark -m 0 -n 1001 -l 1000
+```
+
+-m: mode, 0 means nodes and 1 means branchs
+-n: num of nodes or branchs
+-l: loop

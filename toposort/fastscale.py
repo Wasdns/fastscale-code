@@ -69,13 +69,13 @@ def test():
     root_rate = 100
     edges = [[1,2,50],[2,3,50]]
     capacities = [[1,50],[2,50],[3,50]]
-    print fastscale(root_rate=root_rate, edges=edges, capacities=capacities)
+    print(fastscale(root_rate=root_rate, edges=edges, capacities=capacities))
     # example2: ===100===>1(50)===30===>2(30)===30===>4(50)===40===>
     #                     1(50)===20===>3(10)===10===>4(50)
     root_rate = 100
     edges = [[1,2,30],[1,3,20],[2,4,30],[3,4,20]]
     capacities = [[1,50],[2,30],[3,10],[4,50]]
-    print fastscale(root_rate=root_rate, edges=edges, capacities=capacities)
+    print(fastscale(root_rate=root_rate, edges=edges, capacities=capacities))
 
 if __name__ == '__main__':
     test()
