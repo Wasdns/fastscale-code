@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define M 3 //一共多少层
+#define M 3
 #define MAXN 501
 #define INF 99999
 using namespace std;
@@ -16,42 +16,37 @@ struct Edge
 	}
 };
 
-vector<Edge> g[MAXN]; //邻接表
-ll m; // 每层多少结点
+vector<Edge> g[MAXN];
+ll m;				  
 ll n;
-
-
 
 void dag()
 {
-	ll no = 1;
-	for(ll i = 1; i <= n; i++)
+	for (ll i = 1; i <= n; i++)
 	{
-		ll layer = ((i-1)/m)+1;
-		for(ll j = 1; j <= m; j++)
+		ll layer = ((i - 1) / m) + 1;
+		for (ll j = 1; j <= m; j++)
 		{
-			if(layer*m+j <= n)
+			if (layer * m + j <= n)
 			{
-				g[i].push_back(Edge(layer*m+j, no++));
+				g[i].push_back(Edge(layer * m + j, j));
 			}
 		}
 	}
 }
 
-
-
 int main()
 {
-	scanf("%lld",&m);
-	n = M*m;
+	scanf("%lld", &m);
+	n = M * m;
 	dag();
-	for(ll i = 1; i <= n; i++)
+	for (ll i = 1; i <= n; i++)
 	{
-		for(ll j = 0; j < g[i].size(); j++)
+		for (ll j = 0; j < g[i].size(); j++)
 		{
 			printf("%lld %lld %lld\n", i, g[i][j].next, g[i][j].dis);
 		}
 	}
-	
+
 	return 0;
 }
