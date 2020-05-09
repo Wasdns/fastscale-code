@@ -1,4 +1,4 @@
-## FastScale 
+# FastScale 
 
 This repository contains the simulation scripts of FastScale algorithms. 
 - mcmf: MCMF (Minimum-Cost Maximum Flow) - based FastScale algorithm;
@@ -11,3 +11,33 @@ Xiang Chen, Yuxin Chen, Qun Huang, Haifeng Zhou, Dong Zhang, Chunming Wu, Junchi
 ```
 
 Author: Yuxin Chen, Xiang Chen
+
+## MCMF
+
+```
+make
+benchmark -l 1000 -M 5 -m 100
+```
+
+### Parameter
+
+```
+-l: loop
+-M: how many layers are there
+-m: how many nodes per layer
+```
+
+## Toposort
+
+```
+make
+benchmark -m 0 -n 1001 -l 1000
+```
+
+### Parameter
+
+```
+-l: loop
+-m: mode, 0 means nodes and 1 means branchs
+-n: num of nodes or branchs
+```
